@@ -1,0 +1,88 @@
+generated: '2026-08-25'
+method: probed
+source: live GET of /.well-known/* on every Minerva Project host found in apis.yml and DNS
+note: >-
+  Minerva Project publishes no API and no /.well-known discovery surface of its own. Every
+  /.well-known/* path on the marketing host (minervaproject.com, Webflow) and on the Forum
+  application host (forum.minervaproject.com) returns 404. The one document that does answer 200
+  — /.well-known/security.txt on help.minervaproject.com — is Intercom's own vendor boilerplate
+  served by the Intercom-hosted help center, not a Minerva Project disclosure policy: its
+  Canonical is https://app.intercom.com/.well-known/security.txt and its Contact points at
+  Intercom's Bugcrowd program. It is saved here for the record, but NO SecurityTxt or WellKnown
+  pointer is emitted for it, because it would credit Minerva Project with a disclosure surface
+  Intercom operates. api.minervaproject.com and developer.minervaproject.com do not resolve.
+hit_count: 1
+hosts:
+- host: https://minervaproject.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.minervaproject.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://forum.minervaproject.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://help.minervaproject.com
+  vendor: Intercom-hosted help center (CNAME); documents served here are Intercom's, not Minerva's
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: minerva-project-help-security.txt
+    owner: intercom
+    note: >-
+      RFC 9116 document, but Intercom's own — Canonical https://app.intercom.com/.well-known/security.txt,
+      Contact https://bugcrowd.com/intercom. Not a Minerva Project vulnerability disclosure program.
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+unresolved_hosts:
+- host: api.minervaproject.com
+  note: NXDOMAIN — no A/AAAA record; probed 2026-08-25
+- host: developer.minervaproject.com
+  note: NXDOMAIN — no A/AAAA record; probed 2026-08-25

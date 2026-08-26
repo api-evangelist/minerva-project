@@ -1,0 +1,19 @@
+generated: '2026-08-25'
+method: searched
+source: https://help.minervaproject.com/ + contract-discovery probes, 2026-08-25
+limit_count: 0
+note: >-
+  No rate limits are documented because there is no public API to rate limit. Minerva Project
+  publishes no developer portal, no API reference and no machine-readable contract; the Forum
+  platform is reached through a browser client at forum.minervaproject.com behind per-institution
+  SSO. The public help center (help.minervaproject.com, 162 articles indexed in its own llms.txt)
+  documents classroom workflows only and contains no API, quota, throttling or Retry-After material.
+  Recorded as an honest zero rather than omitted.
+rate_limits: []
+response_headers: []
+evidence:
+- url: https://help.minervaproject.com/llms.txt
+  status: 200
+  note: Full help-center index; no API, rate-limit or quota article.
+- url: https://www.minervaproject.com/openapi.json
+  status: 404

@@ -1,17 +1,32 @@
 aid: minerva-project
 name: Minerva Project
-description: 'Minerva Project is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Minerva Project is a San Francisco based education company founded in 2012 that partners with
+  universities, secondary schools and corporate academies to redesign their academic programs around
+  active learning, and delivers that redesign on Forum, its own purpose-built synchronous learning
+  platform. Forum runs live seminars for up to hundreds of concurrent learners with breakout groups,
+  shared whiteboards, polls, tagged video recordings, TalkTime engagement analytics, and assessment
+  against explicit learning outcomes. The company also incubated Minerva University and the Minerva
+  Baccalaureate. Minerva Project sells institutional partnerships and a licensed platform, not a
+  developer product: as of this profiling pass it publishes no public API, no developer portal, and
+  no machine-readable contract, and Forum access is provisioned per partner institution behind SSO.
 url: https://raw.githubusercontent.com/api-evangelist/minerva-project/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
+image: https://cdn.prod.website-files.com/692097cb0554e89f100a2d98/699365f874c8a3ea7bbac155_MinervaProject-home.jpg
 tags:
 - Company
+- Education
+- EdTech
+- Higher Education
+- Learning Platform
+- Active Learning
+- Virtual Classroom
+- Assessment
+- Learning Analytics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/minerva-project-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/minerva-project_stock/
+  url: https://www.minervaproject.com/
+- type: Documentation
+  url: https://help.minervaproject.com/en/
+- type: Support
+  url: https://help.minervaproject.com/en/
+- type: Blog
+  url: https://www.minervaproject.com/insights
+- type: GitHubOrganization
+  url: https://github.com/minervaproject
+- type: SignUp
+  url: https://forum.minervaproject.com/
+- type: TermsOfService
+  url: https://www.minervaproject.com/mp-terms
+- type: PrivacyPolicy
+  url: https://www.minervaproject.com/mp-privacy
+- type: Compliance
+  url: https://www.minervaproject.com/mp-security
+- type: Conformance
+  url: conformance/minerva-project-conformance.yml
+- type: TrustCenter
+  url: security/minerva-project-trust-center.yml
+- type: Packages
+  url: packages/minerva-project-packages.yml
+- type: LLMsTxt
+  url: llms/minerva-project-llms.txt
+- type: Plans
+  url: plans/minerva-project-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/minerva-project-rate-limits.yml
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Minerva Project ships Forum as an end-user learning platform licensed to partner institutions and
+    reached through a browser behind per-institution SSO — its own sitemap lists no developer,
+    documentation or pricing page, api.minervaproject.com and developer.minervaproject.com do not
+    resolve, and every OpenAPI/GraphQL/MCP/agent-card path probed on minervaproject.com,
+    forum.minervaproject.com and help.minervaproject.com returned 404.
+  evidence:
+  - url: https://www.minervaproject.com/openapi.json
+    status: 404
+  - url: https://forum.minervaproject.com/openapi.json
+    status: 404
+  - url: https://help.minervaproject.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.minervaproject.com/sitemap.xml
+    status: 200
+  checked: '2026-08-25'

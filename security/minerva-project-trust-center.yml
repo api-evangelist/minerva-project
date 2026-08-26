@@ -1,0 +1,45 @@
+generated: '2026-08-25'
+method: searched
+probe: false
+source: https://www.minervaproject.com/mp-security
+url: https://www.minervaproject.com/mp-security
+description: >-
+  Minerva Project publishes a single public security & compliance statement at /mp-security. The
+  automated trust-center probe (probe-security-programs.py) missed it because it lives on a
+  non-standard path (mp-security, not /security or trust.minervaproject.com) and there is no
+  dedicated trust portal; this is the searched, human-verified fill. The page names a SOC 2 Type II
+  audit, GDPR and FERPA compliance, an annual third-party penetration test and an annual risk
+  assessment. No report-request workflow, subprocessor list, ISO 27001 claim or data-residency
+  statement is published, and there is no vulnerability disclosure program or security contact.
+certifications:
+- name: SOC 2 Type II
+  detail: 'Audit with an observation window stated as Q4 2021 through Q2 2022.'
+  currency: >-
+    The page still cites the 2021-2022 window as of this 2026-08-25 read, so the published
+    attestation status is stale on its face; no newer report or bridge letter is offered publicly.
+- name: GDPR
+  detail: Stated as achieved.
+- name: FERPA
+  detail: Stated as achieved — the relevant regime for a US education platform holding student records.
+practices:
+  penetration_test: Annual third-party penetration test, most recent stated Q4 2021.
+  risk_assessment: Annual risk assessment, most recent stated Q4 2021.
+  security_training: All Minerva Project employees complete security training.
+  incident_response: Team trained on incident response procedures for a data breach.
+  data_minimization: 'Stated: "We minimize the data we collect and access."'
+  data_sale: 'Stated: "Minerva Project does not sell your data."'
+report_access:
+  soc_reports: No public request path or portal published on the page.
+not_published:
+- ISO 27001
+- PCI DSS
+- HIPAA
+- FedRAMP
+- subprocessor list
+- data residency statement
+- security contact / vulnerability disclosure policy
+evidence:
+- source: https://www.minervaproject.com/mp-security
+  http_status: 200
+  fetched: '2026-08-25'
+  keywords: [soc 2 type ii, gdpr, ferpa, penetration test, risk assessment]

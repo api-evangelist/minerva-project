@@ -1,0 +1,21 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.minervaproject.com/sitemap.xml + https://www.minervaproject.com/connect (probed 2026-08-25)
+plan_count: 0
+note: >-
+  Minerva Project publishes no pricing of any kind. There is no /pricing page (probed 2026-08-25,
+  HTTP 404) and no pricing URL anywhere in the site's own sitemap.xml, which enumerates every public
+  page. The commercial motion is an enterprise institutional partnership: the site's only conversion
+  path is the "Connect" contact form at /connect, and Forum is licensed to partner universities,
+  secondary schools and corporate academies under negotiated agreements. Recorded as an honest zero
+  — the provider genuinely publishes no plans, tiers, quotas or overage terms.
+plans: []
+contact_sales: https://www.minervaproject.com/connect
+evidence:
+- url: https://www.minervaproject.com/pricing
+  status: 404
+- url: https://www.minervaproject.com/sitemap.xml
+  status: 200
+  note: No pricing/plans URL present.
+- url: https://www.minervaproject.com/connect
+  status: 200
