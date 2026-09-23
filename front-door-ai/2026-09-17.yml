@@ -1,0 +1,29 @@
+# Front Door AI Index — minerva-project — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: minerva-project
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.minervaproject.com
+  final_host: www.minervaproject.com
+  ownership: own
+  owner: minerva-project
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 4
+  host_score: 4
+  density: 4.55
+  words: 880
+  tiers:
+    agentic: 0
+    core: 4
+    model: 0
+  ambiguous: 4
+  top_terms:
+    AI: 3
+    smart: 2
+    artificial intelligence: 1
+    cognitive: 1
+    intelligence: 1
